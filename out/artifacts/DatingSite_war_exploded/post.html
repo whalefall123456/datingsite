@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Xtra Blog</title>
+    <link rel="stylesheet" href="fontawesome/css/all.min.css"> <!-- https://fontawesome.com/ -->
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap" rel="stylesheet">
+    <!-- https://fonts.google.com/ -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/templatemo-xtra-blog.css" rel="stylesheet">
+    <script src="vue/vue.js"></script>
+    <!--
+
+    TemplateMo 553 Xtra Blog
+
+    https://templatemo.com/tm-553-xtra-blog
+
+    -->
+</head>
+<body>
+<header class="tm-header" id="tm-header">
+    <div class="tm-header-wrapper">
+        <button class="navbar-toggler" type="button" aria-label="Toggle navigation">
+            <i class="fas fa-bars"></i>
+        </button>
+        <div class="tm-site-header">
+            <div class="mb-3 mx-auto tm-site-logo"><i class="fas fa-times fa-2x"></i></div>
+            <h1 class="text-center">派蒙 博客&nbsp;</h1>
+        </div>
+        <nav class="tm-nav" id="tm-nav">
+            <ul>
+                <li class="tm-nav-item"><a href="index.html" class="tm-nav-link">
+                    <i class="fas fa-home"></i>
+                    博客主页
+                </a></li>
+                <li class="tm-nav-item active"><a href="post.html" class="tm-nav-link">
+                    <i class="fas fa-pen"></i>
+                    单个页面
+                </a></li>
+                <li class="tm-nav-item"><a href="about.html" class="tm-nav-link">
+                    <i class="fas fa-users"></i>
+                    关于我们
+                </a></li>
+                <li class="tm-nav-item"><a href="contact.html" class="tm-nav-link">
+                    <i class="far fa-comments"></i>
+                    联系客服
+                </a></li>
+            </ul>
+        </nav>
+        <div class="tm-mb-65">
+            <a href="https://facebook.com" class="tm-social-link">
+                <i class="fab fa-facebook tm-social-icon"></i>
+            </a>
+            <a href="https://twitter.com" class="tm-social-link">
+                <i class="fab fa-twitter tm-social-icon"></i>
+            </a>
+            <a href="https://instagram.com" class="tm-social-link">
+                <i class="fab fa-instagram tm-social-icon"></i>
+            </a>
+            <a href="https://linkedin.com" class="tm-social-link">
+                <i class="fab fa-linkedin tm-social-icon"></i>
+            </a>
+        </div>
+        <p class="tm-mb-80 pr-5 text-white">
+            Xtra Blog is a multi-purpose HTML template from TemplateMo website. Left side is a sticky menu bar. Right
+            side content will scroll up and down.
+        </p>
+    </div>
+</header>
+<div class="container-fluid">
+    <main class="tm-main">
+
+
+        <div class="row tm-row">
+            <div class="col-lg-8 tm-post-col">
+                <div class="tm-post-full" style="width: 710px">
+                    <!-- view -->
+
+                    <div id="root" class="mb-4">
+                        <div v-for="(item,index) in data" :key="index">
+                            <!-- 标题 -->
+
+                            <h2 class="pt-2 tm-color-primary tm-post-title">{{item.title}}</h2>
+                            <div>
+                                <div style="float: left" id="postuserinfo">
+                                    <img :src="item.image" style="height: 50px;width: auto">{{item.unick}}
+                                    <div id="postuserid" style="display: none">{{item.uid}}</div>
+                                    <p class="tm-mb-40">{{item.time}}</p>
+                                </div>
+                                <div style="margin-left: 200px">
+                                    <p>
+                                        {{item.content}}
+                                    </p>
+                                </div>
+                                <div class="clear" style="clear: both"></div>
+                            </div>
+                            <span class="d-block text-right tm-color-primary"></span>
+                        </div>
+                    </div>
+
+                    <!-- Comments -->
+                    <div id="comments">
+                        <h2 class="tm-color-primary tm-post-title">Comments</h2>
+                        <hr class="tm-hr-primary tm-mb-45">
+                        <!-- 开始循环 -->
+                        <div class="tm-comment tm-mb-45" v-for="(item,index) in data" :key="index">
+                            <figure class="tm-comment-figure">
+                                <img :src="item.image" alt="Image" class="mb-2 rounded-circle img-thumbnail" style="width: 80px;height: auto;">
+                                <figcaption class="tm-color-primary text-center">{{item.unick}}</figcaption>
+                            </figure>
+                            <div>
+                                <p>
+                                    {{item.text}}
+                                </p>
+                                <div class="d-flex justify-content-between">
+                                    <!-- <a href="#" class="tm-color-primary">REPLY</a> -->
+                                    <span class="tm-color-primary">{{item.time}}</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 回复部分 -->
+                        <form action="" class="mb-5 tm-comment-form">
+                            <h2 class="tm-color-primary tm-post-title mb-4">你的回复</h2>
+                            <div class="mb-4">
+                                <textarea id="text" class="form-control" name="message" rows="6"></textarea>内容
+                            </div>
+                            <div class="text-right">
+                                <button class="tm-btn tm-btn-primary tm-btn-small" id="commentbut" type="button">提交</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer class="row tm-row">
+            <div class="col-md-6 col-12 tm-color-gray">
+                设计： <a rel="nofollow" target="_parent" href="https://templatemo.com" class="tm-external-link">派蒙</a>
+            </div>
+            <div class="col-md-6 col-12 tm-color-gray tm-copyright">
+                Copyright 2020 Xtra Blog Company Co. Ltd.
+            </div>
+        </footer>
+    </main>
+</div>
+<script src="js/jquery-3.3.1.min.js"></script>
+<script src="js/mycookie.js"></script>
+<script src="js/common.js"></script>
+
+<script>
+    var str = window.location.href;
+    var url = "pid"
+    var pat = new RegExp("(?<=" + url + "=)\\w*", "g"); //输出pid=后面的内容
+    var pid = str.match(pat)[0]
+    const postdata = new Vue({
+        el: '#root',
+        data() {
+            return {
+                data: {data: ""},
+            }
+        },
+        beforeCreate: function () {
+            var url = "post?method=queryPostByPid&pid=" + pid;
+            var _self = this;
+            $.get(url, function (data) {
+                _self.data = eval("(" + data + ")");
+            })
+            console.log(data)
+
+        }
+    })
+
+    const mvvm = new Vue({
+        el: '#comments',
+        data() {
+            return {
+                data: {data: ""},
+            }
+        },
+        beforeCreate: function () {
+            var url = "post?method=getComments&pid=" + pid;
+            var _self = this;
+            $.get(url, function (data) {
+                _self.data = eval("(" + data + ")");
+            })
+        }
+    })
+
+    $("#commentbut").click(function () {
+        // 获取输入框内容
+        text = document.getElementById("text").value
+        userjson = window.atob(getCookie("autoUser"));
+        userjson = JSON.parse(userjson);
+        userid = userjson.uid;
+        postuserid = document.getElementById("postuserid").innerText;
+        // 传递帖子数据给后端
+        $.ajax({
+            type: "get",
+            url: "post?method=sendReamrks",
+            data: {
+                uid: userid,
+                pid: pid,
+                content: text,
+                puid:postuserid,
+            },
+                //预期返回数据类型
+            success: function (data) {
+                document.getElementById("text").value = "";
+                alert(data);
+            }
+        })
+    })
+
+    function initadminbut(){
+        var role = JSON.parse(window.atob(getCookie("autoUser"))).role;
+        if(role == '1'){
+            var deletebut = document.createElement("button");
+            deletebut.innerHTML = "删除帖子";
+            deletebut.setAttribute("value","删除帖子")
+            deletebut.setAttribute("onclick","deletepost()")
+            my$("postuserinfo").appendChild(deletebut);
+        }
+    }
+
+    function deletepost(){
+        $.get("post?method=deletepost","pid="+pid,function (data){
+            alert(data);
+        })
+    }
+
+    window.onload = function (){
+        initadminbut();
+    }
+</script>
+<script src="js/templatemo-script.js"></script>
+</body>
+</html>

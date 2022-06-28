@@ -1,0 +1,13 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="DatingSite:war">
+    <output-path>$PROJECT_DIR$/out/artifacts/DatingSite_war</output-path>
+    <root id="archive" name="DatingSite_war.war">
+      <element id="artifact" artifact-name="DatingSite:war exploded" />
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="lib">
+          <element id="library" level="project" name="mylib" />
+        </element>
+      </element>
+    </root>
+  </artifact>
+</component>

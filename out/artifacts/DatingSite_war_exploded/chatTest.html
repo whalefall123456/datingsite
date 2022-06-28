@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/mycookie.js"></script>
+</head>
+<body>
+<span>这里是通知</span>
+<div>
+
+</div>
+    <input type="text">
+    <button>发送信息</button>
+
+
+<script>
+    var ws = new WebSocket("ws://localhost:8080/chat");
+    ws.onopen = function () {
+        alert("我已在线")
+    }
+
+    ws.onmessage = function (data) {
+        alert(data);
+    }
+
+    ws.onclose = function () {
+        alert("我已离线");
+    }
+
+</script>
+
+</body>
+</html>

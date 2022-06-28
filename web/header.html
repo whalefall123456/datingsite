@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="apple-touch-icon" href="assets/img/apple-icon.png">
+    <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.ico">
+    <!-- Load Require CSS -->
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font CSS -->
+    <link href="assets/css/boxicon.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+    <!-- Load Tempalte CSS -->
+    <link rel="stylesheet" href="assets/css/templatemo.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/custom.css">
+</head>
+<body>
+<!-- Header -->
+<nav id="main_nav" class="navbar navbar-expand-lg navbar-light bg-white shadow">
+    <div class="container d-flex justify-content-between align-items-center">
+        <a class="navbar-brand h1" href="index.html">
+            <i class='bx bx-buildings bx-sm text-dark'></i>
+            <span class="text-dark h4">派蒙&nbsp;</span> <span class="text-primary h4">校园交友网站&nbsp;</span>
+        </a>
+        <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-toggler-success" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="align-self-center collapse navbar-collapse flex-fill  d-lg-flex justify-content-lg-between" id="navbar-toggler-success">
+            <div class="flex-fill mx-xl-5 mb-2">
+                <ul class="nav navbar-nav d-flex justify-content-between mx-xl-5 text-center text-dark">
+                    <li class="nav-item">
+                        <a class="nav-link btn-outline-primary rounded-pill px-3" href="index.html">主页&nbsp;</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link btn-outline-primary rounded-pill px-3" href="bbs.html?type=1">论坛&nbsp;</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link btn-outline-primary rounded-pill px-3" href="findfriend.html">寻友&nbsp;</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link btn-outline-primary rounded-pill px-3" href="news.html">新闻</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link btn-outline-primary rounded-pill px-3" href="myview.html">个人主页&nbsp;</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="navbar align-self-center d-flex" id="navbut">
+                <a class="nav-link" href="myview.html?message=true" id="usermsgnum"><i class='bx bx-bell bx-sm bx-tada-hover text-primary'></i><br><span>消息</span></a>
+<!--                <a class="nav-link" href="#"><i class='bx bx-cog bx-sm text-primary'></i><br>设置</a>-->
+                <a class="nav-link" href="login.html" id="user-name-label"><i class='bx bx-user-circle bx-sm text-primary' style="text-align: center;"></i><br><span>登录</span></a>
+
+            </div>
+        </div>
+    </div>
+</nav>
+<!-- Close Header -->
+<!-- Templatemo -->
+<script src="assets/js/templatemo.js"></script>
+<!-- Custom -->
+<script src="assets/js/custom.js"></script>
+<script src="js/mycookie.js"></script>
+<script src="js/jquery-3.3.1.min.js"></script>
+<script src="js/common.js"></script>
+<script>
+    var username;//登录用户的用户名
+    //检查是否已登录
+    function checkLogin() {
+        userjson = window.atob(getCookie("autoUser"));
+        userjson = JSON.parse(userjson);
+        username = userjson.username;
+        if(username == null || username == "") {
+            // alert("please login first!");
+            // location.assign("login.html");//如果用户还未登录，那么返回登录界面
+        } else {
+            var usernamelab =  document.getElementById("user-name-label").getElementsByTagName("span").item(0);
+            usernamelab.innerText = username;
+        }
+    }
+
+    //获取用户的消息数
+    function getMsgNum(){
+        userid = JSON.parse(window.atob(getCookie("autoUser"))).uid;
+        $.get("message?method=queryAllNum","uid="+userid,function (data){
+            data = JSON.parse(data);
+            var num = 0;
+            for(var key in data){
+                num = num + parseInt(data[key]);
+            }
+            document.getElementById("usermsgnum").getElementsByTagName("span").item(0).innerText = "消息("+num+")";
+        })
+    }
+
+    function setAdmin(){
+        role = JSON.parse(window.atob(getCookie("autoUser"))).role;
+        if(role=='1'){
+            let htmlDivElement = document.createElement("a");
+            htmlDivElement.setAttribute("class","nav-link");
+            htmlDivElement.setAttribute("href","admin.html?page=1");
+            htmlDivElement.innerHTML = "<i class='bx bx-cog bx-sm text-primary' style='text-align: center;margin-left: 25%'></i><br>管理员界面";
+            my$("navbut").appendChild(htmlDivElement);
+        }
+    }
+    window.onload = function (){
+        checkLogin();
+        getMsgNum();
+        setAdmin();
+    }
+
+</script>
+</body>
+</html>

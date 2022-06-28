@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<button type="button" id="but">获取帖子信息</button>
+
+<script src="js/jquery-3.3.1.min.js"></script>
+<script>
+  $("#but").click(function (){
+    $.get("post?method=queryPostByUid","uid=10000001",function (data){
+      alert(data);
+    })
+  })
+</script>
+
+</body>
+</html>

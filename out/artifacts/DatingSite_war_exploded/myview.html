@@ -1,0 +1,1071 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Purple Buzz - About Page</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="apple-touch-icon" href="assets/img/apple-icon.png">
+    <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.ico">
+    <!-- Load Require CSS -->
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font CSS -->
+    <link href="assets/css/boxicon.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+    <!-- Load Tempalte CSS -->
+    <link rel="stylesheet" href="assets/css/templatemo.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/custom.css">
+    <link rel="stylesheet" href="css/reset.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="vue/vue.js"></script>
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <!-- 引入样式 -->
+    <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
+    <!-- 引入组件库 -->
+    <script src="https://unpkg.com/element-ui/lib/index.js"></script>
+    <!--
+
+    TemplateMo 561 Purple Buzz
+
+    https://templatemo.com/tm-561-purple-buzz
+
+    -->
+</head>
+
+<body>
+<!-- Header -->
+<div id="header"></div>
+<!-- Close Header -->
+
+
+<!-- Start Banner Hero -->
+<div class="tabs">
+    <navx>
+        <a href="javascript:;" data-cont="primary" class="active">编辑个人主页</a>
+        <a href="javascript:;" data-cont="luntan" class="active">论坛消息</a>
+        <a href="javascript:;" data-cont="middle" class="active">我的好友</a>
+        <a href="javascript:;" data-cont="hign" class="active">好友申请</a>
+        <a href="javascript:;" data-cont="university" class="active">留言消息</a>
+    </navx>
+    <section class="cont" id="primary">
+        <section class="bg-light w-100" id="userinfolist">
+            <div class="container">
+                <div class="row d-flex align-items-center py-5">
+                    <div class="col-lg-6 text-start">
+                        <h1 class="h2 py-5 text-primary typo-space-line">派蒙的主页&nbsp;</h1>
+                        <h2></h2>
+<!--                        <a href="#" class="btn btn-primary rounded-pill btn-block shadow px-4 py-2">加好友&nbsp;</a>-->
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="team-member col-md-4">
+                            <img class="team-member-img img-fluid rounded-circle p-4" src="./assets/img/team-01.jpg"
+                                 alt="Card image">
+<!--                            <button class="button1">提交图片</button>-->
+                            <ul class="team-member-caption list-unstyled text-center pt-4 text-muted light-300">
+                                <li>派蒙</li>
+                                <li>校园交友网站开发者</li>
+                            </ul>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- End Banner Hero -->
+        <!-- Start Team Member -->
+        <section class="container py-5">
+
+            <h1 class="col-12 col-xl-8 h2 text-left text-primary pt-3">编辑您的个人信息</h1>
+            <h2 class="col-12 col-xl-8 h4 text-left regular-400">-----------</h2>
+            <p class="col-12 col-xl-8 text-left text-muted pb-5 light-300">
+                编辑您的个人信息，便于我们更好的实现一些功能，我们会尊重您的隐私，感谢您的配合。
+            </p>
+
+            <div class="row pb-4">
+                <div class="col-lg-4">
+
+                    <div class="contact row mb-4">
+                        <div class="contact-icon col-lg-3 col-3">
+                            <div class="py-3 mb-2 text-center border rounded text-secondary">
+                                <i class='display-6 bx bx-news'></i>
+                            </div>
+                        </div>
+                        <ul class="contact-info list-unstyled col-lg-9 col-9  light-300">
+                            <li class="h5 mb-0">姓名</li>
+                            <li class="text-muted">真实姓名将作为您的认证信息，但不会显示在网页上</li>
+
+                        </ul>
+                    </div>
+
+                    <div class="contact row mb-4">
+                        <div class="contact-icon col-lg-3 col-3">
+                            <div class="border py-3 mb-2 text-center border rounded text-secondary">
+                                <i class='bx bx-laptop display-6'></i>
+                            </div>
+                        </div>
+                        <ul class="contact-info list-unstyled col-lg-9 col-9 light-300">
+                            <li class="h5 mb-0">学校</li>
+                            <li class="text-muted">根据你的学校匹配同校好友</li>
+                            <li class="text-muted"></li>
+                        </ul>
+                    </div>
+
+                    <div class="contact row mb-4">
+                        <div class="contact-icon col-lg-3 col-3">
+                            <div class="border py-3 mb-2 text-center border rounded text-secondary">
+                                <i class='bx bx-money display-6'></i>
+                            </div>
+                        </div>
+                        <ul class="contact-info list-unstyled col-lg-9 col-9 light-300">
+                            <li class="h5 mb-0">个人描述</li>
+                            <li class="text-muted">用于您的自我介绍</li>
+                            <li class="text-muted"></li>
+                        </ul>
+                    </div>
+
+                </div>
+
+
+                <!-- Start Contact Form -->
+                <div class="col-lg-8 ">
+                    <form class="contact-form row" method="post" action="" role="form">
+
+                        <div class="col-lg-6 mb-4">
+                            <div class="form-floating">
+                                <input type="text" class="form-control form-control-lg light-300" id="floatingname"
+                                       name="inputname" placeholder="Name">
+                                <label for="floatingname light-300">姓名</label>
+                            </div>
+                        </div><!-- End Input Name -->
+
+                        <div class="col-lg-6 mb-4">
+                            <div class="form-floating">
+                                <input type="text" class="form-control form-control-lg light-300" id="floatingsex"
+                                       name="inputemail" placeholder="Email">
+                                <label for="floatingemail light-300">性别</label>
+                            </div>
+                        </div><!-- End Input Email -->
+
+                        <div class="col-lg-6 mb-4">
+                                                        <div class="form-floating">
+                                                            <input type="text" class="form-control form-control-lg light-300" id="floatingbirthday"
+                                                                   name="inputphone" placeholder="Phone">
+                                                            <label for="floatingphone light-300">生日</label>
+                                                        </div>
+<!--                            <div class="block" id="timeselect">-->
+<!--                                <el-date-picker-->
+<!--                                        v-model="value1"-->
+<!--                                        type="date"-->
+<!--                                        placeholder="选择日期">-->
+<!--                                </el-date-picker>-->
+<!--                                {{value1}}-->
+<!--                            </div>-->
+                        </div><!-- End Input Phone -->
+
+                        <div class="col-lg-6 mb-4">
+                            <div class="form-floating">
+                                <input type="text" class="form-control form-control-lg light-300" id="floatingschool"
+                                       name="inputcompany" placeholder="Company Name">
+                                <label for="floatingcompany light-300">学校</label>
+                            </div>
+                        </div><!-- End Input Company Name -->
+
+                        <!--                        <div class="col-12">-->
+                        <!--                            <div class="form-floating mb-4">-->
+                        <!--                                <input type="text" class="form-control form-control-lg light-300" id="floatingtag"-->
+                        <!--                                       name="inputsubject" placeholder="Subject">-->
+                        <!--                                <label for="floatingsubject light-300">签名</label>-->
+                        <!--                            </div>-->
+                        <!--                        </div>&lt;!&ndash; End Input Subject &ndash;&gt;-->
+
+                        <div class="col-12">
+                            <div class="form-floating mb-3">
+                                <textarea class="form-control light-300" rows="8" placeholder="Message"
+                                          id="floatingintro"></textarea>
+                                <label for="floatingtextarea light-300">自我介绍</label>
+                            </div>
+                        </div><!-- End Textarea Message -->
+
+                        <div class="col-md-12 col-12 m-auto text-end">
+                            <button type="button" id="savebut"
+                                    class="btn btn-secondary rounded-pill px-md-5 px-4 py-2 radius-0 text-light light-300">
+                                提交
+                            </button>
+                        </div>
+
+                    </form>
+                </div>
+                <!-- End Contact Form -->
+
+
+            </div>
+        </section>
+        <!-- End Team Member -->
+        <!-- Start Our Partner -->
+        <section class="bg-secondary py-3">
+            <div class="container py-5">
+                <h2 class="h2 text-white text-center py-5">我的标签</h2>
+                <div class="square-check">
+                    <input type="checkbox">&nbsp;音乐爱好者</input>&nbsp;&nbsp;
+                    <input type="checkbox">&nbsp;考研党</input>&nbsp;&nbsp;
+                    <input type="checkbox">&nbsp;健身爱好者</input>&nbsp;&nbsp;
+                    <input type="checkbox">&nbsp;养狗专业户</input>&nbsp;&nbsp;
+                    <input type="checkbox">&nbsp;养花专业户</input>&nbsp;&nbsp;
+                    <input type="checkbox">&nbsp;乒乓球</input>&nbsp;&nbsp;
+                    <input type="checkbox">&nbsp;跆拳道</input>&nbsp;&nbsp;
+                    <input type="checkbox">&nbsp;英雄联盟</input>&nbsp;&nbsp;
+                    <input type="checkbox">&nbsp;星际争霸</input>&nbsp;&nbsp;
+                    <input type="checkbox">&nbsp;魔兽世界</input>&nbsp;&nbsp;
+                </div>
+                <button class="button3">提交</button>
+
+            </div>
+        </section>
+        <!--End Our Partner-->
+        <!-- Start Progress -->
+        <section class="bg-white py-5">
+            <div class="container my-4">
+
+                <h1 class="creative-heading h2 pb-3">我的分享</h1>
+
+                <div class="container">
+                    <div class="recent-work-header row text-center pb-5">
+
+                    </div>
+                    <div class="row gy-5 g-lg-5 mb-4">
+
+                        <!-- Start Recent Work -->
+                        <div class="col-md-4 mb-3">
+                            <a href="#" class="recent-work card border-0 shadow-lg overflow-hidden">
+                                <img class="recent-work-img card-img" src="assets/img/recent-work-01.jpg"
+                                     alt="Card image">
+                                <div class="recent-work-vertical card-img-overlay d-flex align-items-end">
+                                    <div class="recent-work-content text-start mb-3 ml-3 text-dark">
+                                        <h3 class="card-title light-300">Social Media</h3>
+                                        <p class="card-text">Ullamco laboris nisi ut aliquip ex</p>
+                                    </div>
+                                </div>
+                            </a>
+                        </div><!-- End Recent Work -->
+
+                        <!-- Start Recent Work -->
+                        <div class="col-md-4 mb-3">
+                            <a href="#" class="recent-work card border-0 shadow-lg overflow-hidden">
+                                <img class="recent-work-img card-img" src="assets/img/recent-work-02.jpg"
+                                     alt="Card image">
+                                <div class="recent-work-vertical card-img-overlay d-flex align-items-end">
+                                    <div class="recent-work-content text-start mb-3 ml-3 text-dark">
+                                        <h3 class="card-title light-300">Web Marketing</h3>
+                                        <p class="card-text">Psum officia anim id est laborum.</p>
+                                    </div>
+                                </div>
+                            </a>
+                        </div><!-- End Recent Work -->
+
+                        <!-- Start Recent Work -->
+                        <div class="col-md-4 mb-3">
+                            <a href="#" class="recent-work card border-0 shadow-lg overflow-hidden">
+                                <img class="recent-work-img card-img" src="assets/img/recent-work-03.jpg"
+                                     alt="Card image">
+                                <div class="recent-work-vertical card-img-overlay d-flex align-items-end">
+                                    <div class="recent-work-content text-start mb-3 ml-3 text-dark">
+                                        <h3 class="card-title light-300">R & D</h3>
+                                        <p class="card-text">Sum dolor sit consencutur</p>
+                                    </div>
+                                </div>
+                            </a>
+                        </div><!-- End Recent Work -->
+
+                        <!-- Start Recent Work -->
+                        <div class="col-md-4 mb-3">
+                            <a href="#" class="recent-work card border-0 shadow-lg overflow-hidden">
+                                <img class="recent-work-img card-img" src="assets/img/recent-work-04.jpg"
+                                     alt="Card image">
+                                <div class="recent-work-vertical card-img-overlay d-flex align-items-end">
+                                    <div class="recent-work-content text-start mb-3 ml-3 text-dark">
+                                        <h3 class="card-title light-300">Public Relation</h3>
+                                        <p class="card-text">Lorem ipsum dolor sit amet</p>
+                                    </div>
+                                </div>
+                            </a>
+                        </div><!-- End Recent Work -->
+
+                        <!-- Start Recent Work -->
+                        <div class="col-md-4 mb-3">
+                            <a href="#" class="recent-work card border-0 shadow-lg overflow-hidden">
+                                <img class="recent-work-img card-img" src="assets/img/recent-work-05.jpg"
+                                     alt="Card image">
+                                <div class="recent-work-vertical card-img-overlay d-flex align-items-end">
+                                    <div class="recent-work-content text-start mb-3 ml-3 text-dark">
+                                        <h3 class="card-title light-300">Branding</h3>
+                                        <p class="card-text">Put enim ad minim veniam</p>
+                                    </div>
+                                </div>
+                            </a>
+                        </div><!-- End Recent Work -->
+
+                        <!-- Start Recent Work -->
+                        <div class="col-md-4 mb-3">
+                            <a href="#" class="recent-work card border-0 shadow-lg overflow-hidden">
+                                <img class="recent-work-img card-img" src="assets/img/recent-work-06.jpg"
+                                     alt="Card image">
+                                <div class="recent-work-vertical card-img-overlay d-flex align-items-end">
+                                    <div class="recent-work-content text-start mb-3 ml-3 text-dark">
+                                        <h3 class="card-title light-300">Creative Design</h3>
+                                        <p class="card-text">Mollit anim id est laborum.</p>
+                                    </div>
+                                </div>
+                            </a>
+                        </div><!-- End Recent Work -->
+
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- End Progress -->
+        <!-- Start Aim -->
+        <!-- Start Contact -->
+        <!-- Start Footer -->
+        <footer class="bg-secondary pt-4">
+            <div class="container">
+                <div class="row py-4">
+
+                    <div class="col-lg-3 col-12 align-left">
+                        <a class="navbar-brand" href="index.html">
+                            <i class='bx bx-buildings bx-sm text-light'></i>
+                            <span class="text-light h5">派蒙</span> <span
+                                class="text-light h5 semi-bold-600">校园交友网站</span>
+                        </a>
+                        <p class="text-light my-lg-4 my-2">
+                            该网站仅限作业测试，并不具有实际效用，感谢您的测试。
+                        </p>
+                        <ul class="list-inline footer-icons light-300">
+                            <li class="list-inline-item m-0">
+                                <a class="text-light" target="_blank" href="http://facebook.com/">
+                                    <i class='bx bxl-facebook-square bx-md'></i>
+                                </a>
+                            </li>
+                            <li class="list-inline-item m-0">
+                                <a class="text-light" target="_blank" href="https://www.linkedin.com/">
+                                    <i class='bx bxl-linkedin-square bx-md'></i>
+                                </a>
+                            </li>
+                            <li class="list-inline-item m-0">
+                                <a class="text-light" target="_blank" href="https://www.whatsapp.com/">
+                                    <i class='bx bxl-whatsapp-square bx-md'></i>
+                                </a>
+                            </li>
+                            <li class="list-inline-item m-0">
+                                <a class="text-light" target="_blank" href="https://www.flickr.com/">
+                                    <i class='bx bxl-flickr-square bx-md'></i>
+                                </a>
+                            </li>
+                            <li class="list-inline-item m-0">
+                                <a class="text-light" target="_blank" href="https://www.medium.com/">
+                                    <i class='bx bxl-medium-square bx-md'></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="col-lg-3 col-md-4 my-sm-0 mt-4">
+                        <h2 class="h4 pb-lg-3 text-light light-300">我们的服务</h2>
+                        <ul class="list-unstyled text-light light-300">
+                            <li class="pb-2">
+                                <i class='bx-fw bx bxs-chevron-right bx-xs'></i><a
+                                    class="text-decoration-none text-light" href="index.html">主页</a>
+                            </li>
+                            <li class="pb-2">
+                                <i class='bx-fw bx bxs-chevron-right bx-xs'></i><a
+                                    class="text-decoration-none text-light py-1" href="about.html">论坛</a>
+                            </li>
+                            <li class="pb-2">
+                                <i class='bx-fw bx bxs-chevron-right bx-xs'></i><a
+                                    class="text-decoration-none text-light py-1" href="work.html">寻友</a>
+                            </li>
+                            <li class="pb-2">
+                                <i class='bx-fw bx bxs-chevron-right bx-xs'></i></i><a
+                                    class="text-decoration-none text-light py-1" href="pricing.html">新闻</a>
+                            </li>
+                            <li class="pb-2">
+                                <i class='bx-fw bx bxs-chevron-right bx-xs'></i><a
+                                    class="text-decoration-none text-light py-1" href="contact.html">关于我们</a>
+                            </li>
+                        </ul>
+                    </div>
+
+
+                    <div class="col-lg-3 col-md-4 my-sm-0 mt-4">
+                        <h2 class="h4 pb-lg-3 text-light light-300">联系客服</h2>
+                        <ul class="list-unstyled text-light light-300">
+                            <li class="pb-2">
+                                <i class='bx-fw bx bx-phone bx-xs'></i><a class="text-decoration-none text-light py-1"
+                                                                          href="tel:010-020-0340">010-020-0340</a>
+                            </li>
+                            <li class="pb-2">
+                                <i class='bx-fw bx bx-mail-send bx-xs'></i><a
+                                    class="text-decoration-none text-light py-1" href="mailto:info@company.com">info@company.com</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="w-100 bg-primary py-3">
+                <div class="container">
+                    <div class="row pt-2">
+                        <div class="col-lg-6 col-sm-12">
+                            <p class="text-lg-start text-center text-light light-300">
+                                © Copyright 2021 Purple Buzz Company. All Rights Reserved.
+                            </p>
+                        </div>
+                        <div class="col-lg-6 col-sm-12">
+                            <p class="text-lg-end text-center text-light light-300">
+                                Designed by <a rel="sponsored" class="text-decoration-none text-light"
+                                               href="https://templatemo.com/"
+                                               target="_blank"><strong>TemplateMo</strong></a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </footer>
+        <!-- End Footer -->
+        <!-- Bootstrap -->
+        <script src="assets/js/bootstrap.bundle.min.js"></script>
+        <!-- Templatemo -->
+        <script src="assets/js/templatemo.js"></script>
+        <!-- Custom -->
+        <script src="assets/js/custom.js"></script>
+    </section>
+    <section class="cont" id="middle">
+        <div class="body2">
+            <div class="wrapper">
+                <div class="containx">
+                    <div class="left">
+                        <div class="top">
+                            <input type="text" placeholder="搜索"/>
+                            <a href="javascript:;" class="search"></a>
+                        </div>
+                        <ul class="people">
+                            <li class="person" data-chat="person1">
+                                <img src="file:///C|/Users/张昱/Desktop/新建文件夹 (4)/imgs/thomas.jpg" alt=""/>
+                                <span class="name">大力水手</span>
+                                <span class="time">2:09 PM</span>
+                                <span class="preview">我想知道...</span>
+                            </li>
+                            <li class="person" data-chat="person2">
+                                <img src="file:///C|/Users/张昱/Desktop/新建文件夹 (4)/imgs/dog.png" alt=""/>
+                                <span class="name">在东北玩泥巴</span>
+                                <span class="time">1:44 PM</span>
+                                <span class="preview">我以前被遗忘的感觉</span>
+                            </li>
+                            <li class="person" data-chat="person3">
+                                <img src="file:///C|/Users/张昱/Desktop/新建文件夹 (4)/imgs/louis-ck.jpeg" alt=""/>
+                                <span class="name">孙笑川</span>
+                                <span class="time">2:09 PM</span>
+                                <span class="preview">但我们可能需要一个新的地毯.</span>
+                            </li>
+                            <li class="person" data-chat="person4">
+                                <img src="file:///C|/Users/张昱/Desktop/新建文件夹 (4)/imgs/bo-jackson.jpg" alt=""/>
+                                <span class="name">呼呼呼</span>
+                                <span class="time">2:09 PM</span>
+                                <span class="preview">还好吧，情况不是很坏...</span>
+                            </li>
+                            <li class="person" data-chat="person5">
+                                <img src="file:///C|/Users/张昱/Desktop/新建文件夹 (4)/imgs/michael-jordan.jpg" alt=""/>
+                                <span class="name">L梦の鱼</span>
+                                <span class="time">2:09 PM</span>
+                                <span class="preview">
+                            生活有度，人生添寿
+                        </span>
+                            </li>
+                            <li class="person" data-chat="person6">
+                                <img src="file:///C|/Users/张昱/Desktop/新建文件夹 (4)/imgs/drake.jpg" alt=""/>
+                                <span class="name">Drake</span>
+                                <span class="time">2:09 PM</span>
+                                <span class="preview">真理惟一可靠的标准就是永远自相符合</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="right">
+                        <div class="top"><span>To: <span class="name">在东北玩泥巴</span></span></div>
+                        <div class="chat" data-chat="person1">
+                            <div class="conversation-start">
+                                <span>今天, 6:48 AM</span>
+                            </div>
+                            <div class="bubble you">
+                                你好,
+                            </div>
+                            <div class="bubble you">
+                                是我啊.
+                            </div>
+                            <div class="bubble you">
+                                我想知道...
+                            </div>
+                        </div>
+                        <div class="chat" data-chat="person2">
+                            <div class="conversation-start">
+                                <span>今天, 5:38 PM</span>
+                            </div>
+                            <div class="bubble you">
+                                在不在, 亚索怎么玩
+                            </div>
+                            <div class="bubble you">
+                                我不会
+                            </div>
+                            <div class="bubble me">
+                                一直按e就行了。
+
+                            </div>
+                            <div class="bubble me">
+                                你是认真的
+                                ?
+                            </div>
+                            <div class="bubble you">
+                                当然
+                            </div>
+                            <div class="bubble you">
+                                已经0-23了
+
+                            </div>
+                        </div>
+                        <div class="chat" data-chat="person3">
+                            <div class="conversation-start">
+                                <span>今天, 3:38 AM</span>
+                            </div>
+                            <div class="bubble you">
+                                Hey哥们!
+                            </div>
+                            <div class="bubble you">
+                                嗯……我在走廊上踩到了狗屎。
+
+                            </div>
+                            <div class="bubble me">
+                                ... 什么？.
+                            </div>
+                            <div class="bubble me">
+                                你是来搞笑的?
+                            </div>
+                            <div class="bubble you">
+                                我想想...
+                            </div>
+                            <div class="bubble you">
+                                简直是糟糕的一天...
+                            </div>
+                            <div class="bubble you">
+                                但我们可能需要一个新的地毯。
+
+                            </div>
+                        </div>
+                        <div class="chat" data-chat="person4">
+                            <div class="conversation-start">
+                                <span>昨天, 4:20 PM</span>
+                            </div>
+                            <div class="bubble you">
+                                妹的
+                            </div>
+                            <div class="bubble you">
+
+                                简直是糟糕的一天...
+                            </div>
+                            <div class="bubble me">
+                                ... 什么？.
+
+                            </div>
+                            <div class="bubble me">
+
+                                嗯……我在走廊上踩到了狗屎。
+                            </div>
+                            <div class="bubble you">
+
+                                你是来搞笑的?
+                            </div>
+
+                        </div>
+                        <div class="chat" data-chat="person5">
+                            <div class="conversation-start">
+                                <span>今天, 6:28 AM</span>
+                            </div>
+                            <div class="bubble you">
+                                醒醒
+                            </div>
+                            <div class="bubble you">
+                                醒醒
+                            </div>
+                            <div class="bubble you">
+                                我需要三件东西：爱情友谊和图书。然而这三者之间何其相通！炽热的爱情可以充实图书的内容，图书又是人们最忠实的朋友
+                            </div>
+                        </div>
+                        <div class="chat" data-chat="person6">
+                            <div class="conversation-start">
+                                <span>星期五, 1:27 PM</span>
+                            </div>
+                            <div class="bubble you">
+                                你手机怎么了
+                            </div>
+                            <div class="bubble you">
+                                你终于有一个智能手机:D
+
+                            </div>
+                            <div class="bubble me">
+                                Drake?
+                            </div>
+                            <div class="bubble me">
+                                你为什么不回答?
+
+                            </div>
+                            <div class="bubble you">
+                                生活有度，人生添寿
+                            </div>
+                        </div>
+                        <div class="write">
+                            <form action="">
+                                <a href="javascript:;" class="write-link attach"></a>
+                                <input type="text"/>&nbsp;&nbsp;
+                            </form>
+                        </div>
+                        <a href="javascript:;" class="" width="50px"></a>&nbsp;
+                        <button class="button3">发送</button>
+                    </div>
+                </div>
+            </div>
+
+
+            <script src="js/index.js"></script>
+
+            <!--这行代码可以去掉-->
+            <a href="http://www.bootstrapmb.com" style="display:none">bootstrapmb</a>
+        </div>
+    </section>
+    <section class="cont" id="luntan">
+        <br>
+        <br>
+        <div class="pricing-horizontal row col-10 m-auto d-flex shadow-sm rounded overflow-hidden bg-white">
+            <div class="pricing-horizontal-icon col-md-3 text-center bg-secondary text-light py-4">
+                <img src="assets/img/feature-work-3.jpg" width="300" height="200">
+            </div>
+            <div class="pricing-horizontal-body offset-lg-1 col-md-5 col-lg-4 d-flex align-items-center pl-5 pt-lg-0 pt-4">
+                <ul class="text-left px-4 list-unstyled mb-0 light-300">
+                    <p class="ziti2">
+                        冬樱花是日本夏季的应景花，在欧洲则多被用来食用。当然这不是因为它的的味道可口，而是它可爱的姿态散发着令人回味的魅力。受到这种花祝福而生的人，他的可爱会令异性产生无法抗拒的悸动。</p>
+                </ul>
+            </div>
+            <div class="pricing-horizontal-tag col-md-4 text-center pt-3 d-flex align-items-center">
+                <div class="w-100 light-300">
+                    <p></p>
+                    <a href="#" class="btn rounded-pill px-4 btn-outline-primary mb-3">立即回复</a>
+                </div>
+            </div>
+        </div>
+        <br>
+        <!-- End Pricing Horizontal -->
+        <div class="pricing-horizontal row col-10 m-auto d-flex shadow-sm rounded overflow-hidden bg-white">
+            <div class="pricing-horizontal-icon col-md-3 text-center bg-secondary text-light py-4">
+                <img src="assets/img/feature-work-1.jpg" width="300" height="200">
+            </div>
+            <div class="pricing-horizontal-body offset-lg-1 col-md-5 col-lg-4 d-flex align-items-center pl-5 pt-lg-0 pt-4">
+                <ul class="text-left px-4 list-unstyled mb-0 light-300">
+                    <p class="ziti2">
+                        冬樱花是日本夏季的应景花，在欧洲则多被用来食用。当然这不是因为它的的味道可口，而是它可爱的姿态散发着令人回味的魅力。受到这种花祝福而生的人，他的可爱会令异性产生无法抗拒的悸动。</p>
+                </ul>
+            </div>
+            <div class="pricing-horizontal-tag col-md-4 text-center pt-3 d-flex align-items-center">
+                <div class="w-100 light-300">
+                    <p></p>
+                    <a href="#" class="btn rounded-pill px-4 btn-outline-primary mb-3">立即回复</a>
+                </div>
+            </div>
+        </div>
+        <br>
+        <!-- End Pricing Horizontal -->
+        <div class="pricing-horizontal row col-10 m-auto d-flex shadow-sm rounded overflow-hidden bg-white">
+            <div class="pricing-horizontal-icon col-md-3 text-center bg-secondary text-light py-4">
+                <img src="assets/img/recent-work-06.jpg" height="200">
+            </div>
+            <div class="pricing-horizontal-body offset-lg-1 col-md-5 col-lg-4 d-flex align-items-center pl-5 pt-lg-0 pt-4">
+                <ul class="text-left px-4 list-unstyled mb-0 light-300">
+                    <p class="ziti2">
+                        冬樱花是日本夏季的应景花，在欧洲则多被用来食用。当然这不是因为它的的味道可口，而是它可爱的姿态散发着令人回味的魅力。受到这种花祝福而生的人，他的可爱会令异性产生无法抗拒的悸动。</p>
+                </ul>
+            </div>
+            <div class="pricing-horizontal-tag col-md-4 text-center pt-3 d-flex align-items-center">
+                <div class="w-100 light-300">
+                    <p></p>
+                    <a href="#" class="btn rounded-pill px-4 btn-outline-primary mb-3">立即回复</a>
+                </div>
+            </div>
+        </div>
+        <br>
+        <!-- End Pricing Horizontal -->
+        <div class="pricing-horizontal row col-10 m-auto d-flex shadow-sm rounded overflow-hidden bg-white">
+            <div class="pricing-horizontal-icon col-md-3 text-center bg-secondary text-light py-4">
+                <img src="assets/img/related-post-03.jpg" width="300" height="200">
+            </div>
+            <div class="pricing-horizontal-body offset-lg-1 col-md-5 col-lg-4 d-flex align-items-center pl-5 pt-lg-0 pt-4">
+                <ul class="text-left px-4 list-unstyled mb-0 light-300">
+                    <p class="ziti2">
+                        冬樱花是日本夏季的应景花，在欧洲则多被用来食用。当然这不是因为它的的味道可口，而是它可爱的姿态散发着令人回味的魅力。受到这种花祝福而生的人，他的可爱会令异性产生无法抗拒的悸动。</p>
+                </ul>
+            </div>
+            <div class="pricing-horizontal-tag col-md-4 text-center pt-3 d-flex align-items-center">
+                <div class="w-100 light-300">
+                    <p></p>
+                    <a href="#" class="btn rounded-pill px-4 btn-outline-primary mb-3">立即回复</a>
+                </div>
+            </div>
+        </div>
+        <!-- End Pricing Horizontal -->
+    </section>
+    <section class="cont" id="hign">
+        <br>
+        <div class="row pb-4" id="requestlist" >
+            <div class="worksingle-comment-body col-md-8 m-auto" v-for="(item,index) in data" :key="index">
+                <div class="d-flex">
+                    <div>
+                        <img class="rounded-circle" :src="item.image" style="width: 50px;">
+                        <button class="button2" style="margin-left: 700px" @click="agreefriend(item.id,item.uid)">同意好友</button>
+                        <button class="button1" @click="refusefriend(item.id)">拒绝好友</button>
+                    </div>
+                    <div class="comment-body">
+                        <div class="comment-header d-flex justify-content-between ms-3">
+                            <div class="header text-start">
+                                <h5 class="h6">{{item.unick}}</h5>
+                                <p class="text-muted light-300">{{item.retime}}</p>
+                            </div>
+                        </div>
+                        <div class="footer">
+                            <div class="card-body border ms-3 light-300">
+                                {{item.content}}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div><!-- End Comment -->
+
+
+    </section>
+    <section class="cont" id="university">
+        <br>
+        <div class="row pb-4" id="guestlist" >
+            <div class="worksingle-comment-body col-md-8 m-auto" v-for="(item,index) in data" :key="index">
+                <div class="d-flex">
+                    <div>
+                        <img class="rounded-circle" :src="item.image" style="width: 50px;">
+                    </div>
+                    <div class="comment-body">
+                        <div class="comment-header d-flex justify-content-between ms-3">
+                            <div class="header text-start">
+                                <h5 class="h6">{{item.unick}}</h5>
+                                <p class="text-muted light-300">{{item.time}}</p>
+                            </div>
+                        </div>
+                        <div class="footer">
+                            <div class="card-body border ms-3 light-300">
+                                {{item.text}}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div><!-- End Comment -->
+
+
+
+
+        <footer class="bg-secondary pt-4">
+            <div class="container">
+                <div class="row py-4">
+
+                    <div class="col-lg-3 col-12 align-left">
+                        <a class="navbar-brand" href="index.html">
+                            <i class='bx bx-buildings bx-sm text-light'></i>
+                            <span class="text-light h5">派蒙</span> <span
+                                class="text-light h5 semi-bold-600">校园交友网站</span>
+                        </a>
+                        <p class="text-light my-lg-4 my-2">
+                            该网站仅限作业测试，并不具有实际效用，感谢您的测试。
+                        </p>
+                        <ul class="list-inline footer-icons light-300">
+                            <li class="list-inline-item m-0">
+                                <a class="text-light" target="_blank" href="http://facebook.com/">
+                                    <i class='bx bxl-facebook-square bx-md'></i>
+                                </a>
+                            </li>
+                            <li class="list-inline-item m-0">
+                                <a class="text-light" target="_blank" href="https://www.linkedin.com/">
+                                    <i class='bx bxl-linkedin-square bx-md'></i>
+                                </a>
+                            </li>
+                            <li class="list-inline-item m-0">
+                                <a class="text-light" target="_blank" href="https://www.whatsapp.com/">
+                                    <i class='bx bxl-whatsapp-square bx-md'></i>
+                                </a>
+                            </li>
+                            <li class="list-inline-item m-0">
+                                <a class="text-light" target="_blank" href="https://www.flickr.com/">
+                                    <i class='bx bxl-flickr-square bx-md'></i>
+                                </a>
+                            </li>
+                            <li class="list-inline-item m-0">
+                                <a class="text-light" target="_blank" href="https://www.medium.com/">
+                                    <i class='bx bxl-medium-square bx-md'></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="col-lg-3 col-md-4 my-sm-0 mt-4">
+                        <h2 class="h4 pb-lg-3 text-light light-300">我们的服务</h2>
+                        <ul class="list-unstyled text-light light-300">
+                            <li class="pb-2">
+                                <i class='bx-fw bx bxs-chevron-right bx-xs'></i><a
+                                    class="text-decoration-none text-light" href="index.html">主页</a>
+                            </li>
+                            <li class="pb-2">
+                                <i class='bx-fw bx bxs-chevron-right bx-xs'></i><a
+                                    class="text-decoration-none text-light py-1" href="about.html">论坛</a>
+                            </li>
+                            <li class="pb-2">
+                                <i class='bx-fw bx bxs-chevron-right bx-xs'></i><a
+                                    class="text-decoration-none text-light py-1" href="work.html">寻友</a>
+                            </li>
+                            <li class="pb-2">
+                                <i class='bx-fw bx bxs-chevron-right bx-xs'></i></i><a
+                                    class="text-decoration-none text-light py-1" href="pricing.html">新闻</a>
+                            </li>
+                            <li class="pb-2">
+                                <i class='bx-fw bx bxs-chevron-right bx-xs'></i><a
+                                    class="text-decoration-none text-light py-1" href="contact.html">关于我们</a>
+                            </li>
+                        </ul>
+                    </div>
+
+
+                    <div class="col-lg-3 col-md-4 my-sm-0 mt-4">
+                        <h2 class="h4 pb-lg-3 text-light light-300">联系客服</h2>
+                        <ul class="list-unstyled text-light light-300">
+                            <li class="pb-2">
+                                <i class='bx-fw bx bx-phone bx-xs'></i><a class="text-decoration-none text-light py-1"
+                                                                          href="tel:010-020-0340">010-020-0340</a>
+                            </li>
+                            <li class="pb-2">
+                                <i class='bx-fw bx bx-mail-send bx-xs'></i><a
+                                    class="text-decoration-none text-light py-1" href="mailto:info@company.com">info@company.com</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="w-100 bg-primary py-3">
+                <div class="container">
+                    <div class="row pt-2">
+                        <div class="col-lg-6 col-sm-12">
+                            <p class="text-lg-start text-center text-light light-300">
+                                © Copyright 2021 Purple Buzz Company. All Rights Reserved.
+                            </p>
+                        </div>
+                        <div class="col-lg-6 col-sm-12">
+                            <p class="text-lg-end text-center text-light light-300">
+                                Designed by <a rel="sponsored" class="text-decoration-none text-light"
+                                               href="https://templatemo.com/"
+                                               target="_blank"><strong>TemplateMo</strong></a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </footer>
+        <!-- End Footer -->
+    </section>
+</div>
+<script>
+    $("#header").load("header.html");//load 方法参数是引入公共文件的路径
+</script>
+<script src="js/mycookie.js"></script>
+<script src="js/common.js"></script>
+<script>
+
+    function getQueryString(name) {
+        let reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i");
+        let r = window.location.search.substr(1).match(reg);
+        if (r != null) {
+            return decodeURIComponent(r[2]);
+        };
+        return null;
+    }
+
+
+    function setread(type){
+        userid = JSON.parse(window.atob(getCookie("autoUser"))).uid;
+        $.get("message?method=setZero","uid="+userid+"&type="+type,function (data){
+
+        })
+    }
+
+</script>
+
+<!--读取用户的信息-->
+<script>
+    function getinfo() {
+        userjson = window.atob(getCookie("autoUser"));
+        userjson = JSON.parse(userjson);
+        userid = userjson.uid;
+        $.get("user?method=myselfInfo", "uid=" + userid, function (data) {
+            data = JSON.parse(data);
+            document.getElementById("floatingname").setAttribute("value",data.uname);
+            document.getElementById("floatingsex").setAttribute("value",data.sex);
+            document.getElementById("floatingbirthday").setAttribute("value",data.birthday);
+            document.getElementById("floatingintro").innerText = data.introduce;
+            document.getElementById("floatingschool").setAttribute("value",data.school);
+
+            $("#userinfolist")[0].getElementsByTagName("h1").item(0).innerHTML = data.unick+"的主页";
+            $("#userinfolist")[0].getElementsByTagName("h2").item(0).innerHTML = "ID: "+data.uid;
+            $("#userinfolist")[0].getElementsByTagName("img").item(0).setAttribute("src",data.image);
+            $("#userinfolist")[0].getElementsByTagName("li").item(0).innerHTML = data.unick;
+            $("#userinfolist")[0].getElementsByTagName("li").item(1).innerHTML = data.introduce;
+        })
+    }
+    getinfo()
+
+    function initrequest(){
+        userid = JSON.parse(window.atob(getCookie("autoUser"))).uid;
+        $.get("message?method=queryRequestMsg","uid="+userid,function (data){
+
+        })
+    }
+
+    // initrequest();
+
+    //初始化好友申请列表
+    new Vue({
+        el:'#requestlist',
+        data(){
+            return {
+                data:{
+                    data:""
+                }
+            }
+        },
+        beforeCreate(){
+            const data1 = this;
+            userid = JSON.parse(window.atob(getCookie("autoUser"))).uid;
+            $.get("message?method=queryRequestMsg","uid="+userid,function (data){
+                data1.data = eval("(" + data + ")");
+            })
+        },
+        methods:{
+            agreefriend(requestid,uid){
+                userid = JSON.parse(window.atob(getCookie("autoUser"))).uid;
+                $.get("friend?method=agreeApply","tuid="+userid+"&uid="+uid+"&requestid="+requestid,function (data){
+                    alert(data);
+                })
+            },
+            refusefriend(requestid){
+                $.get("friend?method=rejectApply","requestid="+requestid,function (data){
+                    alert(data);
+                })
+            }
+        }
+    })
+
+    //初始化好友留言消息
+    new Vue({
+        el:'#guestlist',
+        data(){
+            return {
+                data:{
+                    data:""
+                }
+            }
+        },
+        beforeCreate(){
+            const data1 = this;
+            userid = JSON.parse(window.atob(getCookie("autoUser"))).uid;
+            $.get("message?method=queryGuestMsg","uid="+userid,function (data){
+                data1.data = eval("(" + data + ")");
+            })
+        },
+
+    })
+
+    //点击提交修改信息
+    $("#savebut").click(function (){
+        userid = JSON.parse(window.atob(getCookie("autoUser"))).uid;
+
+        uname = document.getElementById("floatingname").value;
+        sex = document.getElementById("floatingsex").value;
+        birthday = document.getElementById("floatingbirthday").value;
+        introduce = document.getElementById("floatingintro").value;
+        school = document.getElementById("floatingschool").value;
+
+        $.get("user?method=saveInfo","uid="+userid+"&uname="+uname+"&sex="+sex+"&birthday="+birthday+"&introduce="+introduce+"&school="+school,function (data){
+            alert(data);
+        })
+    })
+
+
+    //需求：当用户点击某个模块的时候，给该模块添加样式，对应的内容显示出来
+    //获取所有的a标签
+    var navs = document.querySelectorAll("navx a");
+    // 先显示一部分内容（H5标签选择器默认选每一类标签的第一个）
+    if(getQueryString("message")){
+        document.getElementById("university").style.display = "block";
+        for (var j = 0; j < navs.length; j++) {
+            //先去除所有的active标签
+            navs[j].classList.remove("active");
+        }
+        //对应的a加样式
+        document.querySelectorAll("navx a")[4].classList.add("active");
+        setread("guenum");
+    }else{
+        document.querySelector("section").style.display = "block";
+    }
+
+    //遍历该数组
+    for (var i = 0; i < navs.length; i++) {
+        navs[i].onclick = function () {
+            //每次点击前都先清除原来的内容
+            var beforeNav = document.querySelector(".active")
+            var beforeId = beforeNav.dataset["cont"];
+            switch (beforeId){
+                case "luntan":
+                    setread("bbsnum");
+                    break;
+                case "hign":
+                    setread("renum");
+                    break;
+                case "middle":
+                    setread("frinum");
+                    break;
+                case "university":
+                    setread("guenum");
+                    break;
+                default :
+                    break;
+            }
+            document.querySelector("#" + beforeId).style.display = "none";
+            //排他思想
+            for (var j = 0; j < navs.length; j++) {
+                //先去除所有的active标签
+                navs[j].classList.remove("active");
+            }
+            //对应的a加样式
+            this.classList.add("active");
+            //获取对应的内容标签并添加样式
+            var secId = this.dataset["cont"];
+            document.querySelector("#" + secId).style.display = "block";
+        }
+    }
+
+</script>
+
+</body>
+</html>

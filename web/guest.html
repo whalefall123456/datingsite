@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<button id="sendbut">提交</button>
+<h2 id="result">a</h2>
+
+<script src="js/jquery-3.3.1.min.js"></script>
+<script>
+    var but = document.getElementById("sendbut");
+    var redata;
+    but.onclick = function sendguest() {
+        $.ajax({
+            type: "get",
+            // 请求HTML页面的URL地址
+            url: "/guest?method=sendGuest",
+            // id,id,内容
+            data: {
+                uid: '10000001',
+                tid: '10000002',
+                text: '啊啊啊啊',
+            },
+            dataType: "json", //预期返回数据类型
+            success: function (data) {
+                console.log(data);
+                redata = data;
+                document.getElementById("result").innerText = data.text;
+            }
+        });
+    };
+
+</script>
+</body>
+</html>

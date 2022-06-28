@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="./css/index1.css"  type="text/css" charset="utf-8"/>
+    <script src="vue/vue.js"></script>
+    <title>添加好友测试</title>
+
+</head>
+<body>
+<input type="text" id="inputuid">
+<input type="text" id="content">
+<button type="button" id="applybut">点击加好友</button>
+
+<button type="button" id="queryrequest">查看好友申请消息</button>
+
+<div>
+    <img id="userimg" src="">
+    <sapn id="user-id" style="display: none"></sapn>
+    <span id="user-name"></span>
+    <span id="requesttime"></span>
+    <span id="requestmsg"></span>
+    <span id="requestid" style="display: none"></span>
+    <button type="button" id="agreebut">同意</button>
+</div>
+
+
+
+
+<script src="js/jquery-3.3.1.min.js"></script>
+<script src="js/mycookie.js"></script>
+<script>
+    var uid;
+    userjson = window.atob(getCookie("autoUser"));
+    userjson = JSON.parse(userjson);
+    uid = userjson.uid;
+
+    $("#applybut").click(function (){
+        $.get("friend","method=addApply&tuid="+$("#inputuid").val()+"&uid="+uid+"&content="+$("#content").val(),function(data){
+            alert(data);
+        })
+    })
+
+    $("#queryrequest").click(function (){
+        $.get("message","method=queryRequestMsg&uid="+uid,function(data){
+            data = JSON.parse(data);
+            document.getElementById("userimg").setAttribute("src",data.user1.img);
+            document.getElementById("user-name").innerText=data.user1.unick;
+            document.getElementById("requestid").innerText = data.user1.requestid;
+            document.getElementById("user-id").innerText = data.user1.uid;
+        })
+    })
+
+    $("#agreebut").click(function (){
+        $.get("friend","method=agreeApply&uid="+$("#user-id").text()+"&tuid="+uid+"&requestid="+document.getElementById("requestid").innerText,function(data){
+            alert(data);
+        })
+    })
+
+</script>
+</body>
+
+</html>

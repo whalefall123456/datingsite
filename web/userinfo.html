@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Purple Buzz - About Page</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="apple-touch-icon" href="assets/img/apple-icon.png">
+    <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.ico">
+    <!-- Load Require CSS -->
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font CSS -->
+    <link href="assets/css/boxicon.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+    <!-- Load Tempalte CSS -->
+    <link rel="stylesheet" href="assets/css/templatemo.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/custom.css">
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
+    <style>
+        .main{
+            margin: 0 0 0 0;
+            overflow: hidden;
+        }
+
+        .form_1{
+            width:400px;
+            height:300px;
+            border:3px solid #f8f8f8;
+            visibility: hidden;
+            position: absolute;
+            z-index: 999;
+            opacity: 1;
+            overflow: hidden;
+            background-color: white;
+            text-align: center;
+            margin-top: 10%;
+            margin-left: 35%;
+            border-radius: 10px;
+        }
+        .open{
+            visibility: visible;
+            opacity: 1;
+            position: absolute;
+            /* 留言框位置 */
+            left: 50%;
+            top: 50%;
+            margin-left: -200px;
+            margin-top: 0px;
+        }
+        .input_1{
+            margin-top: 15px;
+            width:100%;
+            height:40px;
+
+        }
+        input{
+            width:280px;
+            height:30px;
+            border-radius: 5px;
+            border:1px solid  #e5dfdf;
+        }
+        .input_1 .login_logo{
+            text-align: left;
+            font-size: 20px;
+            font-weight: 300;
+            padding-left: 30px;
+            float: left;
+        }
+        .input_1 .close{
+            width:20px;
+            height:20px;
+            color:#5d5d5d;
+            text-align: center;
+            line-height: 20px;
+            border:1px solid  #5d5d5d;
+            border-radius: 50%;
+            float: right;
+            padding-top: 0px;
+            margin-right: 10px;
+            font-size: 12px;
+        }
+        .input_1 .close:hover{
+            cursor:pointer;
+        }
+        hr{
+            background-color: #F8F8F8;
+        }
+
+        .input_1 .submit_1{
+            border:2px solid #f88020;
+            height:30px;
+            background-color: white;
+        }
+        .input_1 .submit_1:hover{
+            background-color: #f88020;
+            color:white;
+        }
+        .test{
+            overflow: hidden;
+        }
+    </style>
+<!--
+    
+TemplateMo 561 Purple Buzz
+
+https://templatemo.com/tm-561-purple-buzz
+
+-->
+</head>
+
+<body>
+    <!-- Header -->
+    <div id="header"></div>
+    <!-- Close Header -->
+
+
+
+    <!-- Start Banner Hero -->
+    <section class="bg-light w-100" id="userinfolist">
+        <div class="container">
+            <div class="row d-flex align-items-center py-5">
+                <div class="col-lg-6 text-start">
+                    <h1 class="h2 py-5 text-primary typo-space-line">派蒙的主页&nbsp;</h1>
+					<div id="btn_1" class="button" style="border-radius: 15px;background-color: #4232C2;color: #FFFFFF;width: 70px; text-align: center;">加好友&nbsp;</div>
+                    <p class="light-300">
+                        这里是<span>派蒙</span>的个人主页，欢迎来到我的空间，有事请在下方留言栏留言
+                    </p>
+                </div>
+                <div class="col-lg-6">
+                    <div class="team-member col-md-4">
+                    <img class="team-member-img img-fluid rounded-circle p-4" src="./assets/img/team-01.jpg" alt="Card image">
+                    <ul class="team-member-caption list-unstyled text-center pt-4 text-muted light-300">
+                        <li>派蒙</li>
+                        <li>校园交友网站开发者</li>
+                    </ul>
+                </div>
+					
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End Banner Hero -->
+
+
+    <!-- Start Team Member -->
+    <section class="container py-5">
+        <div class="pt-5 pb-3 d-lg-flex align-items-center gx-5">
+
+            <div class="col-lg-3">
+                <h2 class="h2 py-5 typo-space-line">我的帖子&nbsp;&nbsp;</h2>
+                <p class="text-muted light-300">
+                    这里是用户近期发布的动态
+                </p>
+            </div>
+			<section class="container overflow-hidden py-5">
+        <div class="row gx-5 gx-sm-3 gx-lg-5 gy-lg-5 gy-3 pb-3 projects">
+
+            <!-- Start Recent Work -->
+            <div class="col-xl-3 col-md-4 col-sm-6 project ui branding">
+                <a href="#" class="service-work card border-0 text-white shadow-sm overflow-hidden mx-5 m-sm-0">
+                    <img class="service card-img" src="assets/img/services-01.jpg" alt="Card image">
+                    <div class="service-work-vertical card-img-overlay d-flex align-items-end">
+                        <div class="service-work-content text-left text-light">
+                            <span class="btn btn-outline-light rounded-pill mb-lg-3 px-lg-4 light-300">UI/UX design</span>
+                            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing</p>
+                        </div>
+                    </div>
+                </a>
+            </div><!-- End Recent Work -->
+
+            <!-- Start Recent Work -->
+            <div class="col-xl-3 col-md-4 col-sm-6 project ui graphic">
+                <a href="#" class="service-work card border-0 text-white shadow-sm overflow-hidden mx-5 m-sm-0">
+                    <img class="card-img" src="assets/img/services-02.jpg" alt="Card image">
+                    <div class="service-work-vertical card-img-overlay d-flex align-items-end">
+                        <div class="service-work-content text-left text-light">
+                            <span class="btn btn-outline-light rounded-pill mb-lg-3 px-lg-4 light-300">Social Media</span>
+                            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing</p>
+                        </div>
+                    </div>
+                </a>
+            </div><!-- End Recent Work -->
+
+
+            <!-- Start Recent Work -->
+            <div class="col-xl-3 col-md-4 col-sm-6 project branding">
+                <a href="#" class="service-work card border-0 text-white shadow-sm overflow-hidden mx-5 m-sm-0">
+                    <img class="card-img" src="assets/img/services-07.jpg" alt="Card image">
+                    <div class="service-work-vertical card-img-overlay d-flex align-items-end">
+                        <div class="service-work-content text-left text-light">
+                            <span class="btn btn-outline-light rounded-pill mb-lg-3 px-lg-4 light-300">Business</span>
+                            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing</p>
+                        </div>
+                    </div>
+                </a>
+            </div><!-- End Recent Work -->
+
+            <!-- Start Recent Work -->
+            <div class="col-xl-3 col-md-4 col-sm-6 project ui graphic branding">
+                <a href="#" class="service-work card border-0 text-white shadow-sm overflow-hidden mx-5 m-sm-0">
+                    <img class="card-img" src="assets/img/services-08.jpg" alt="Card image">
+                    <div class="service-work-vertical card-img-overlay d-flex align-items-end">
+                        <div class="service-work-content text-left text-light">
+                            <span class="btn btn-outline-light rounded-pill mb-lg-3 px-lg-4 light-300">Branding</span>
+                            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing</p>
+                        </div>
+                    </div>
+                </a>
+            </div><!-- End Recent Work -->
+
+        </div>
+    </section>
+
+        </div>
+    </section>
+    <!-- End Team Member -->
+
+    <!-- Start Our Partner -->
+    <section class="bg-secondary py-3">
+        <div class="container py-5">
+            <h2 class="h2 text-white text-center py-5">我的标签</h2>
+            <div class="row text-center" id="taglist">
+<!--                <div class="col-md-3 mb-3">-->
+<!--                    <div class="card partner-wap py-5">-->
+<!--                        <a href="#"><i class='display-1 text-white bx bxs-buildings'></i><br>考研党</a>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--                <div class="col-md-3 mb-3">-->
+<!--                    <div class="card partner-wap py-5">-->
+<!--                        <a href="#"><i class='display-1 bx text-white bxs-check-shield bx-lg'></i><br>完美主义者</a>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--                <div class="col-md-3 mb-3">-->
+<!--                    <div class="card partner-wap py-5">-->
+<!--                        <a href="#"><i class='display-1 text-white bx bxs-bolt-circle'></i><br>热爱运动</a>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--                <div class="col-md-3 mb-3">-->
+<!--                    <div class="card partner-wap py-5">-->
+<!--                        <a href="#"><i class='display-1 text-white bx bxs-spa'></i><br>爱好养花</a>-->
+<!--                    </div>-->
+<!--                </div>-->
+            </div>
+        </div>
+    </section>
+    <!--End Our Partner-->
+
+    <!-- Start Progress -->
+    <section class="bg-white py-5">
+        <div class="container my-4">
+
+            <h1 class="creative-heading h2 pb-3">我的分享</h1>
+
+            <div class="container">
+            <div class="recent-work-header row text-center pb-5">
+                
+            </div>
+            <div class="row gy-5 g-lg-5 mb-4">
+
+                <!-- Start Recent Work -->
+                <div class="col-md-4 mb-3">
+                    <a href="#" class="recent-work card border-0 shadow-lg overflow-hidden">
+                        <img class="recent-work-img card-img" src="assets/img/recent-work-01.jpg" alt="Card image">
+                        <div class="recent-work-vertical card-img-overlay d-flex align-items-end">
+                            <div class="recent-work-content text-start mb-3 ml-3 text-dark">
+                                <h3 class="card-title light-300">Social Media</h3>
+                                <p class="card-text">Ullamco laboris nisi ut aliquip ex</p>
+                            </div>
+                        </div>
+                    </a>
+                </div><!-- End Recent Work -->
+
+                <!-- Start Recent Work -->
+                <div class="col-md-4 mb-3">
+                    <a href="#" class="recent-work card border-0 shadow-lg overflow-hidden">
+                        <img class="recent-work-img card-img" src="assets/img/recent-work-02.jpg" alt="Card image">
+                        <div class="recent-work-vertical card-img-overlay d-flex align-items-end">
+                            <div class="recent-work-content text-start mb-3 ml-3 text-dark">
+                                <h3 class="card-title light-300">Web Marketing</h3>
+                                <p class="card-text">Psum officia anim id est laborum.</p>
+                            </div>
+                        </div>
+                    </a>
+                </div><!-- End Recent Work -->
+
+                <!-- Start Recent Work -->
+                <div class="col-md-4 mb-3">
+                    <a href="#" class="recent-work card border-0 shadow-lg overflow-hidden">
+                        <img class="recent-work-img card-img" src="assets/img/recent-work-03.jpg" alt="Card image">
+                        <div class="recent-work-vertical card-img-overlay d-flex align-items-end">
+                            <div class="recent-work-content text-start mb-3 ml-3 text-dark">
+                                <h3 class="card-title light-300">R & D</h3>
+                                <p class="card-text">Sum dolor sit consencutur</p>
+                            </div>
+                        </div>
+                    </a>
+                </div><!-- End Recent Work -->
+
+                <!-- Start Recent Work -->
+                <div class="col-md-4 mb-3">
+                    <a href="#" class="recent-work card border-0 shadow-lg overflow-hidden">
+                        <img class="recent-work-img card-img" src="assets/img/recent-work-04.jpg" alt="Card image">
+                        <div class="recent-work-vertical card-img-overlay d-flex align-items-end">
+                            <div class="recent-work-content text-start mb-3 ml-3 text-dark">
+                                <h3 class="card-title light-300">Public Relation</h3>
+                                <p class="card-text">Lorem ipsum dolor sit amet</p>
+                            </div>
+                        </div>
+                    </a>
+                </div><!-- End Recent Work -->
+
+                <!-- Start Recent Work -->
+                <div class="col-md-4 mb-3">
+                    <a href="#" class="recent-work card border-0 shadow-lg overflow-hidden">
+                        <img class="recent-work-img card-img" src="assets/img/recent-work-05.jpg" alt="Card image">
+                        <div class="recent-work-vertical card-img-overlay d-flex align-items-end">
+                            <div class="recent-work-content text-start mb-3 ml-3 text-dark">
+                                <h3 class="card-title light-300">Branding</h3>
+                                <p class="card-text">Put enim ad minim veniam</p>
+                            </div>
+                        </div>
+                    </a>
+                </div><!-- End Recent Work -->
+
+                <!-- Start Recent Work -->
+                <div class="col-md-4 mb-3">
+                    <a href="#" class="recent-work card border-0 shadow-lg overflow-hidden">
+                        <img class="recent-work-img card-img" src="assets/img/recent-work-06.jpg" alt="Card image">
+                        <div class="recent-work-vertical card-img-overlay d-flex align-items-end">
+                            <div class="recent-work-content text-start mb-3 ml-3 text-dark">
+                                <h3 class="card-title light-300">Creative Design</h3>
+                                <p class="card-text">Mollit anim id est laborum.</p>
+                            </div>
+                        </div>
+                    </a>
+                </div><!-- End Recent Work -->
+
+            </div>
+        </div>
+        </div>
+    </section>
+    <!-- End Progress -->
+
+    <!-- Start Aim -->
+ 
+    <!-- Start Contact -->
+    <section class="banner-bg bg-light py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 mx-auto my-4 p-3">
+                    <form action="#" method="get"><h1 class="h2 text-center">留言</h1>
+                    <form class="tm-contact-form">
+                    <div class="tm-form-group">
+                        <textarea rows="5" id="contact_message" name="contact_message" class="form-control" placeholder="Message" required></textarea>
+                    </div>
+                    <div class="tm-text-right" style="text-align: center;">
+                        <button id="sendguestbut" type="button" class="btn btn-primary rounded-pill btn-block shadow px-4 py-2">发送&nbsp;</button>
+                    </div>
+                </form>
+                    <p class="text-center light-300">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt labore et dolore magna aliqua.</p>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End Contact -->
+
+
+    <!-- Start Footer -->
+    <footer class="bg-secondary pt-4">
+        <div class="container">
+            <div class="row py-4">
+
+                <div class="col-lg-3 col-12 align-left">
+                    <a class="navbar-brand" href="index.html">
+                        <i class='bx bx-buildings bx-sm text-light'></i>
+                        <span class="text-light h5">派蒙</span> <span class="text-light h5 semi-bold-600">校园交友网站</span>
+                    </a>
+                    <p class="text-light my-lg-4 my-2">
+                        该网站仅限作业测试，并不具有实际效用，感谢您的测试。
+                    </p>
+                    <ul class="list-inline footer-icons light-300">
+                        <li class="list-inline-item m-0">
+                            <a class="text-light" target="_blank" href="http://facebook.com/">
+                                <i class='bx bxl-facebook-square bx-md'></i>
+                            </a>
+                        </li>
+                        <li class="list-inline-item m-0">
+                            <a class="text-light" target="_blank" href="https://www.linkedin.com/">
+                                <i class='bx bxl-linkedin-square bx-md'></i>
+                            </a>
+                        </li>
+                        <li class="list-inline-item m-0">
+                            <a class="text-light" target="_blank" href="https://www.whatsapp.com/">
+                                <i class='bx bxl-whatsapp-square bx-md'></i>
+                            </a>
+                        </li>
+                        <li class="list-inline-item m-0">
+                            <a class="text-light" target="_blank" href="https://www.flickr.com/">
+                                <i class='bx bxl-flickr-square bx-md'></i>
+                            </a>
+                        </li>
+                        <li class="list-inline-item m-0">
+                            <a class="text-light" target="_blank" href="https://www.medium.com/">
+                                <i class='bx bxl-medium-square bx-md' ></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-3 col-md-4 my-sm-0 mt-4">
+                    <h2 class="h4 pb-lg-3 text-light light-300">我们的服务</h2>
+                        <ul class="list-unstyled text-light light-300">
+                            <li class="pb-2">
+                                <i class='bx-fw bx bxs-chevron-right bx-xs'></i><a class="text-decoration-none text-light" href="index.html">主页</a>
+                            </li>
+                            <li class="pb-2">
+                                <i class='bx-fw bx bxs-chevron-right bx-xs'></i><a class="text-decoration-none text-light py-1" href="about.html">论坛</a>
+                            </li>
+                            <li class="pb-2">
+                                <i class='bx-fw bx bxs-chevron-right bx-xs'></i><a class="text-decoration-none text-light py-1" href="work.html">寻友</a>
+                            </li>
+                            <li class="pb-2">
+                                <i class='bx-fw bx bxs-chevron-right bx-xs'></i></i><a class="text-decoration-none text-light py-1" href="pricing.html">新闻</a>
+                            </li>
+                            <li class="pb-2">
+                                <i class='bx-fw bx bxs-chevron-right bx-xs'></i><a class="text-decoration-none text-light py-1" href="contact.html">关于我们</a>
+                            </li>
+                        </ul>
+                </div>
+
+               
+                <div class="col-lg-3 col-md-4 my-sm-0 mt-4">
+                    <h2 class="h4 pb-lg-3 text-light light-300">联系客服</h2>
+                    <ul class="list-unstyled text-light light-300">
+                        <li class="pb-2">
+                            <i class='bx-fw bx bx-phone bx-xs'></i><a class="text-decoration-none text-light py-1" href="tel:010-020-0340">010-020-0340</a>
+                        </li>
+                        <li class="pb-2">
+                            <i class='bx-fw bx bx-mail-send bx-xs'></i><a class="text-decoration-none text-light py-1" href="mailto:info@company.com">info@company.com</a>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="w-100 bg-primary py-3">
+            <div class="container">
+                <div class="row pt-2">
+                    <div class="col-lg-6 col-sm-12">
+                        <p class="text-lg-start text-center text-light light-300">
+                            © Copyright 2021 Purple Buzz Company. All Rights Reserved.
+                        </p>
+                    </div>
+                    <div class="col-lg-6 col-sm-12">
+                        <p class="text-lg-end text-center text-light light-300">
+                            Designed by <a rel="sponsored" class="text-decoration-none text-light" href="https://templatemo.com/" target="_blank"><strong>TemplateMo</strong></a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </footer>
+    <!-- End Footer -->
+
+
+    <div class="main">
+        <div class="form_1">
+            <form>
+                <div class="input_1"><div class="login_logo" style="color: #4232c2;font-size:28px">请填写验证信息</div><div class="close">X</div></div>
+                <textarea autocomplete="off" rows="2" placeholder="请填写验证信息" class="el-textarea__inner" style="min-height: 180px;"></textarea>
+                <div class="input_1"><input id="submit_1" type="button" value="提&nbsp;交"></div>
+            </form>
+        </div>
+    </div>
+
+
+    <!-- Bootstrap -->
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <!-- Templatemo -->
+    <script src="assets/js/templatemo.js"></script>
+    <!-- Custom -->
+    <script src="assets/js/custom.js"></script>
+    <script src="js/mycookie.js"></script>
+    <script src="js/common.js"></script>
+    <script>
+        $("#header").load("header.html");//load 方法参数是引入公共文件的路径
+    </script>
+    <script>
+        var tag;
+        var str = window.location.href;
+        var url = "uid"
+        var pat = new RegExp("(?<="+url+"=)\\w*","g"); //输出url=后面的内容
+        uid = str.match(pat)[0] //取可能的第一个值
+        function inituserInfo(){
+            $.get("user","method=userInfo&uid="+uid,function (data){
+                data = JSON.parse(data);
+                $("#userinfolist")[0].getElementsByTagName("h1").item(0).innerHTML = data.unick+"的主页"
+                $("#userinfolist")[0].getElementsByTagName("span").item(0).innerHTML = data.unick;
+                $("#userinfolist")[0].getElementsByTagName("img").item(0).setAttribute("src",data.image);
+                $("#userinfolist")[0].getElementsByTagName("li").item(0).innerHTML = data.unick;
+                $("#userinfolist")[0].getElementsByTagName("li").item(1).innerHTML = data.introduce;
+            })
+        }
+
+
+        //发送好友申请
+        $("#submit_1").click(function (){
+            userid = JSON.parse(window.atob(getCookie("autoUser"))).uid
+            var content = document.getElementsByClassName("el-textarea__inner").item(0).value;
+            $.get("friend?method=addApply","uid="+userid+"&tuid="+uid+"&content="+content,function (data){
+                alert(data);
+            })
+            var form_1=document.getElementsByClassName("form_1");
+            form_1[0].className="form_1";
+        })
+
+        //发送留言
+        $("#sendguestbut").click(function (){
+            userid = JSON.parse(window.atob(getCookie("autoUser"))).uid;
+            var content = document.getElementById("contact_message").value;
+            if(content!=''){
+                $.get("guest?method=sendGuest","uid="+userid+"&tuid="+uid+"&text="+content,function (data){
+                    data = JSON.parse(data);
+                    alert(data.text);
+                })
+            }else{
+                alert("请输入留言内容")
+            }
+        })
+
+        function inittag(){
+            $.get("user?method=getTag","uid="+uid,function (data){
+                data = JSON.parse(data);
+                tag = data;
+                // alert(data);
+                var i =0;
+                //判断是否为数组
+                if(!Array.isArray(data.tag)){
+                    //如果是不是数组就只执行一次
+                    let htmlDivElement = document.createElement("div");
+                    htmlDivElement.setAttribute("class","col-md-3 mb-3");
+                    htmlDivElement.innerHTML="<div class=\"card partner-wap py-5\">\n" +
+                        "                    <button class=\"filter-btn btn rounded-pill btn-outline-primary border-0 m-md-2 px-md-4 active\"><span>考研党</span></button>\n" +
+                        "                </div>";
+                    htmlDivElement.getElementsByTagName("span").item(0).innerText=data["tag"];
+                    my$("taglist").appendChild(htmlDivElement);
+                }else{
+                    //如果是数组就循环展示
+                    while(i<data.tag.length){
+                        let htmlDivElement = document.createElement("div");
+                        htmlDivElement.setAttribute("class","col-md-3 mb-3");
+                        htmlDivElement.innerHTML="<div class=\"card partner-wap py-5\">\n" +
+                            "                    <button class=\"filter-btn btn rounded-pill btn-outline-primary border-0 m-md-2 px-md-4 active\"><span>考研党</span></button>\n" +
+                            "                </div>";
+                        htmlDivElement.getElementsByTagName("span").item(0).innerText=data["tag"][i];
+                        my$("taglist").appendChild(htmlDivElement);
+                        i++;
+                    }
+                }
+            })
+        }
+
+            var btn_1=document.getElementById("btn_1");
+            var close=document.getElementsByClassName("close");
+            var form_1=document.getElementsByClassName("form_1");
+
+            btn_1.addEventListener('click',function(){
+                form_1[0].className="form_1 open";
+            })
+            close[0].addEventListener('click',function(){
+                form_1[0].className="form_1";
+            })
+
+        inittag();
+        inituserInfo();
+    </script>
+
+
+</body>
+
+</html>

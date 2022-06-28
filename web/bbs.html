@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>论坛</title>
+    <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.ico">
+    <link rel="stylesheet" href="fontawesome/css/all.min.css"> <!-- https://fontawesome.com/ -->
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap" rel="stylesheet">
+    <!-- https://fonts.google.com/ -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/templatemo-xtra-blog.css" rel="stylesheet">
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="vue/vue.js"></script>
+    <script src="js/mycookie.js"></script>
+    <!--
+
+    TemplateMo 553 Xtra Blog
+
+    https://templatemo.com/tm-553-xtra-blog
+
+    -->
+        <style>
+        a{
+            text-decoration:underline;
+            color:blue;
+        }
+        .hide{
+            display: none;
+        }
+        .c1{
+            position: fixed;
+            top:0;
+            bottom: 0;
+            left:0;
+            right: 0;
+            background: rgba(0,0,0,.5);
+            z-index: 2;
+        }
+        .c2{
+            background-color: white;
+            position: fixed;
+            width: 500px;
+            height: 400px;
+            top:50%;
+            left: 50%;
+            z-index: 3;
+            margin-top: -150px;
+            margin-left: -200px;
+        }
+        #modal p {
+            margin-left:80px;
+        }
+        </style>
+
+</head>
+<body>
+<!--    header-->
+<div id="header"></div>
+<!--header-->
+
+<header class="tm-header" id="tm-header">
+    <div class="tm-header-wrapper">
+        <button class="navbar-toggler" type="button" aria-label="Toggle navigation">
+            <i class="fas fa-bars"></i>
+        </button>
+        <div class="tm-site-header">
+            <div class="mb-3 mx-auto tm-site-logo"><i class="fas fa-times fa-2x"></i></div>
+            <h1 class="text-center">派蒙 博客</h1>
+        </div>
+        <nav class="tm-nav" id="tm-nav">
+            <ul>
+                <li class="tm-nav-item active"><a href="index.html" class="tm-nav-link">
+                    <i class="fas fa-home"></i>
+                    论坛主页
+                </a></li>
+<!--                <li class="tm-nav-item"><a href="post.html" class="tm-nav-link">-->
+<!--                    <i class="fas fa-pen"></i>-->
+<!--                    单个页面-->
+<!--                </a></li>-->
+                <li class="tm-nav-item active"><a class="tm-nav-link" onclick="Show()">
+                    <i class="fas fa-pen"></i>
+                    发布帖子
+                </a></li>
+                <li class="tm-nav-item"><a href="about.html" class="tm-nav-link">
+                    <i class="fas fa-users"></i>
+                    关于我们
+                </a></li>
+                <li class="tm-nav-item"><a href="contact.html" class="tm-nav-link">
+                    <i class="far fa-comments"></i>
+                    联系客服
+                </a></li>
+            </ul>
+
+            <!-- 弹出的表单 -->
+            <div id="shade" class="c1 hide"></div>
+            <div id="modal" class="c2 hide">
+                <p style="color: #0cc;margin-top: 12px" >标题<input type="text" style="width: 270px;" id="posttitle"></p>
+                <p><textarea style="width: 320px;height:180px" id="postcontent">内容</textarea></p>
+
+                <p>选择类型</p>
+                <p>
+                    交友<input type="radio" value="1" name="bool">
+                    吐槽<input type="radio" value="2" name="bool">
+                    学习<input type="radio" value="3" name="bool">
+                    娱乐<input type="radio" value="5" name="bool">
+                    求助<input type="radio" value="4" name="bool" checked>
+                </p>
+                <p style="margin-left: 40%;">
+                    <input
+                            style="
+                color:white;
+                background-color:#00cccc;
+                border-radius: 3px;
+                border-width: 0;
+                margin: 0;
+                outline: none;
+                font-family: KaiTi;
+                text-align: center;
+                cursor: pointer;"
+                            type="button" value="确定" id="savepost">
+                    <input type="button"
+                           style="
+                color:white;
+                background-color:#00cccc;
+                border-radius: 3px;
+                border-width: 0;
+                margin: 0;
+                outline: none;
+                font-family: KaiTi;
+                text-align: center;
+                cursor: pointer;"
+                           value="取消" onclick="Hide();">
+                </p>
+            </div>
+
+        </nav>
+        <div class="tm-mb-65">
+            <a rel="nofollow" href="https://fb.com/templatemo" class="tm-social-link">
+                <i class="fab fa-facebook tm-social-icon"></i>
+            </a>
+            <a href="https://twitter.com" class="tm-social-link">
+                <i class="fab fa-twitter tm-social-icon"></i>
+            </a>
+            <a href="https://instagram.com" class="tm-social-link">
+                <i class="fab fa-instagram tm-social-icon"></i>
+            </a>
+            <a href="https://linkedin.com" class="tm-social-link">
+                <i class="fab fa-linkedin tm-social-icon"></i>
+            </a>
+        </div>
+        <p class="tm-mb-80 pr-5 text-white">
+            Xtra Blog is a multi-purpose HTML template from TemplateMo website. Left side is a sticky menu bar. Right
+            side content will scroll up and down.
+        </p>
+    </div>
+</header>
+<div class="container-fluid">
+    <main class="tm-main">
+        <!-- Search form -->
+        <div class="row tm-row">
+            <div class="col-12">
+<!--                <form method="GET" class="form-inline tm-mb-80 tm-search-form">-->
+<!--                    <input class="form-control tm-search-input" name="query" type="text" placeholder="Search..."-->
+<!--                           aria-label="Search">-->
+<!--                    <button class="tm-search-button" type="submit">-->
+<!--                        <i class="fas fa-search tm-search-icon" aria-hidden="true"></i>-->
+<!--                    </button>-->
+<!--                </form>-->
+                <!-- 导航 -->
+                <div class="navbar align-self-center d-flex" >
+                    <button class="filter-btn btn rounded-pill btn-outline-primary border-0 m-md-2 px-md-4"
+                            data-filter=".project" title="1">交友
+                    </button>
+                    <button class="filter-btn btn rounded-pill btn-outline-primary border-0 m-md-2 px-md-4"
+                            data-filter=".project" title="2" >吐槽
+                    </button>
+                    <button class="filter-btn btn rounded-pill btn-outline-primary border-0 m-md-2 px-md-4"
+                            data-filter=".project" title="3" >学习
+                    </button>
+                    <button class="filter-btn btn rounded-pill btn-outline-primary border-0 m-md-2 px-md-4"
+                            data-filter=".project" title="5" >娱乐
+                    </button>
+                    <button class="filter-btn btn rounded-pill btn-outline-primary border-0 m-md-2 px-md-4"
+                            data-filter=".project" title="4" >求助
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- 论坛主页展示部分 -->
+
+        <div class="row tm-row" id="root">
+            <article class="col-12 col-md-6 tm-post" v-for="(item,index) in data" :key="index">
+                <p v-show="false">{{item.pid}}</p>
+                <hr class="tm-hr-primary">
+                <span class="effect-lily tm-post-link tm-pt-60">
+                    <!--                        <div class="tm-post-link-inner">-->
+                    <!--                            &lt;!&ndash; 图片 &ndash;&gt;-->
+                    <!--                            <img :src="item.image" alt="Image" class="img-fluid">                            -->
+                    <!--                        </div>-->
+                    <span class="position-absolute tm-new-badge">New</span>
+                    <h2 class="tm-pt-30 tm-color-primary tm-post-title">{{item.title}}</h2>
+                </span>
+                <p class="tm-pt-30">
+                    {{item.content}}
+                </p>
+                <div class="d-flex justify-content-between tm-pt-45">
+                    <span>by {{item.unick}}</span>
+                    <div class="tm-post-link-inner" style="background-color: #FFFFFF">
+                        <!-- 图片 -->
+                        <img :src="item.image" alt="Image" class="img-fluid"
+                             style="width: 30px;height: 30px;border-radius: 50%;background:none">
+                    </div>
+
+                    <!--                        <span class="tm-color-primary">Travel . Events</span>-->
+                    <!--                        <span class="tm-color-primary">{{item.time}}</span>-->
+                </div>
+                <hr>
+                <div class="d-flex justify-content-between">
+                    <span class="tm-color-primary">{{item.time}}</span>
+                    <span>{{item.remarks}} comments</span>
+                </div>
+
+            </article>
+        </div>
+        <div class="row tm-row tm-mt-100 tm-mb-75">
+            <div class="tm-prev-next-wrapper">
+                <a href="#" class="mb-2 tm-btn tm-btn-primary tm-prev-next disabled tm-mr-20">第一页</a>
+                <a href="#" class="mb-2 tm-btn tm-btn-primary tm-prev-next">下一页</a>
+            </div>
+            <div class="tm-paging-wrapper">
+                <span class="d-inline-block mr-3">页面</span>
+                <nav class="tm-paging-nav d-inline-block">
+                    <ul>
+                        <li class="tm-paging-item active">
+                            <a href="#" class="mb-2 tm-btn tm-paging-link">1</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+        <footer class="row tm-row">
+            <hr class="col-12">
+            <div class="col-md-6 col-12 tm-color-gray">
+                设计： <a rel="nofollow" target="_parent" href="https://templatemo.com" class="tm-external-link">派蒙</a>
+            </div>
+            <div class="col-md-6 col-12 tm-color-gray tm-copyright">
+                Copyright 2020 Xtra Blog Company Co. Ltd.
+            </div>
+        </footer>
+    </main>
+</div>
+
+<script src="js/jquery-3.3.1.min.js"></script>
+
+<script>
+    $("#header").load("header.html");//load 方法参数是引入公共文件的路径
+</script>
+<script>
+    const mmvm = new Vue({
+        el: '#root',
+        data() {
+            return {
+                data: {data: ""},
+            }
+        },
+        beforeCreate: function () {
+            var str = window.location.href;
+            var url = "type"
+            var pat = new RegExp("(?<=" + url + "=)\\w*", "g"); //输出pid=后面的内容
+            var type = str.match(pat)[0];
+            var url = "post?method=queryPostByType&type="+type;
+            var _self = this;
+            $.get(url, function (data) {
+                _self.data = eval("(" + data + ")");
+            })
+        },
+        methods: {
+        }
+    })
+
+</script>
+<script src="js/templatemo-script.js"></script>
+<script>
+    $(function(){
+        $("body").on("click",".col-12.col-md-6.tm-post",function(){
+            var pid = this.getElementsByTagName("p").item(0).innerText;
+            window.location.href="post.html?pid="+pid;
+        })
+    })
+
+
+    $(".filter-btn.btn.rounded-pill.btn-outline-primary.border-0.m-md-2.px-md-4").click(function (){
+        var type = this.getAttribute("title");
+        window.location.href="bbs.html?type="+type;
+    })
+
+
+
+    // 弹出表单
+    function addModelMeter(){
+
+        $('#dialogExp').dialog({
+            title:'我的dialog',
+            width: 750,
+            height: 200,
+            cache: false,
+            modal:true,
+            closed:true,
+            buttons:[{
+                text : '取消',
+                handler : function(){
+                    $('#dialogExp').dialog('close');
+                }
+            }],
+        });
+        $('#dialogExp').dialog('open');
+    }
+
+
+    function Show(){
+        document.getElementById('shade').classList.remove('hide');
+        document.getElementById('modal').classList.remove('hide');
+    }
+    function Hide(){
+        document.getElementById('shade').classList.add('hide');
+        document.getElementById('modal').classList.add('hide');
+    }
+
+    $("#savepost").click(function (){
+        var title = document.getElementById("posttitle").value;
+        var content = document.getElementById("postcontent").value;
+        var type = $("input[name='bool']:checked").val();
+        userid = JSON.parse(window.atob(getCookie("autoUser"))).uid;
+        if(title=="" || content==""){
+            alert("请完整输入帖子信息")
+        }else{
+            $.get("post?method=savePost","title="+title+"&content="+content+"&type="+type+"&uid="+userid,function (data){
+                data = JSON.parse(data);
+                alert(data.text);
+                Hide();
+            })
+        }
+    })
+</script>
+
+</body>
+</html>
